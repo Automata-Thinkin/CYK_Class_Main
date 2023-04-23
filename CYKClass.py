@@ -6,42 +6,49 @@ class cykNode:
         self.set = None
         self.down = None
         self.diagonal = None
+
     def __init_(self, word):
         self.__init__()
         self.initialString = word
         self.createStructure()
-    def __init__(self,word, set, down, across):
+
+    def __init__(self, word, set, down, across):
         self.initialString = word
         self.set = set
         self.down = down
         self.across = across
 
-    #Getters
+    # Getters
     def getSet(self):
         return self.set
+
     def getDown(self):
         return self.down
+
     def getAcross(self):
         return self.across
 
-    #Setters
+    # Setters
     def setSet(self, set):
         self.set = set
+
     def setDown(self, down):
         self.down = down
+
     def setAcross(self, across):
         self.across = across
 
-    #Functionalities
+    # Functionalities
 
     def setLevel(self, current):
-        if(self.down() != None):
+        if (self.down() != None):
             self.level += 1
-            current.setLevel(self,current)
+            current.setLevel(self, current)
+
     def createStructure(self):
-        if(len(self.initialString) !=0):
-            self.parent = cykNode(self.initialString[1::],None, self, cykNode(self.initialString[1]))
-            
+        if (len(self.initialString) != 0):
+            self.parent = cykNode(self.initialString[1::], None, self, cykNode(self.initialString[1]))
+
 
 
 
