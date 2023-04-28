@@ -4,7 +4,7 @@ def HelloWorld():
     print("Hello CYK!")
 def main():
     #Just to ensure Interpreter Works
-    HelloWorld()
+    #HelloWorld()
 
     #init will run and start test class
     testClass = cykTest.CYKClass_Test()

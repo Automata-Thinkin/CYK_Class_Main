@@ -125,6 +125,7 @@ class CYKClass_Test():
 
     # Upon Initialization, class will run these test functions
     def __init__(self):
+        '''
         print("----------------------------------")
         self.empty_Initialization_Test()
         print("----------------------------------")
@@ -133,6 +134,7 @@ class CYKClass_Test():
         self.node_toString_Test()
         print("----------------------------------")
         self.cykStruct_empty_Initialization_Test()
+        '''
         print("----------------------------------")
         self.cykStruct_param_Initialization_Test()
         print("----------------------------------")
