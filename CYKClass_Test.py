@@ -1,4 +1,5 @@
 import CYKClass as cyk
+import grammarWriter as gReader
 
 # Unit Tests
 
@@ -112,15 +113,19 @@ class CYKClass_Test():
         print('\nZ34:\n' + root.parent.parent.parent.getAcross().getAcross().toString())
         print('\nZ44:\n' + root.parent.parent.parent.getAcross().getAcross().getAcross().toString())
 
-    def cykStruct_param_Display_Test(self):
-        funct = self.cykStruct_param_Display_Test.__name__
+    def grammarWriter_param_initialization(self):
+        cykReader = gReader.CykReader("grammar1.txt")
+        print("Grammar: \n", cykReader.grammar)
+
+    def grammarWriter_param_initialization_test(self):
+        funct = self.grammarWriter_param_initialization_test.__name__
+        self.grammarWriter_param_initialization()
         try:
             print(funct)
-            self.cykStruct_param_Display()
+            self.grammarWriter_param_initialization()
             print(funct + "... success")
         except:
             print(funct + "... failed")
-
 
 
     # Upon Initialization, class will run these test functions
@@ -134,11 +139,14 @@ class CYKClass_Test():
         self.node_toString_Test()
         print("----------------------------------")
         self.cykStruct_empty_Initialization_Test()
-        '''
+
         print("----------------------------------")
         self.cykStruct_param_Initialization_Test()
         print("----------------------------------")
         self.cykStruct_param_Display_Test()
+        print("----------------------------------")
+        '''
+        self.grammarWriter_param_initialization_test()
         print("----------------------------------")
 
         print("End CYKClass Test Class\n")
